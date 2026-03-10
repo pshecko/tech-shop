@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario con JavaScript</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link type="text/css" href="style.css" rel="stylesheet" media="screen"/>
+</head>
+<body>
+    <header>
+		<nav aria-label="Navegacion principal"></nav>
+    </header>
+    <main id="todo">
+		<section id="menu" class="menuNo" aria-label="Zona principal de la tienda">
+            <!--Producto del 1 al 9-->
+            <section id="catalog">
+                <article id="div1" name="DIVS"></article>
+                <article id="div2" name="DIVS"></article>
+                <article id="div3" name="DIVS"></article>
+                <article id="div4" name="DIVS"></article>
+                <article id="div5" name="DIVS"></article>
+                <article id="div6" name="DIVS"></article>
+                <article id="div7" name="DIVS"></article>
+                <article id="div8" name="DIVS"></article>
+                <article id="div9" name="DIVS"></article>
+            </section>
+            <!--Botones de compra-->
+            <section id="divbotones">
+                <button type="button" id="botonTotal">Calcular total</button>
+                <button type="button" id="botonDatos" disabled="disabled">Datos personales</button>
+                <button type="button" id="botonPago" disabled="disabled">Pago</button>
+                <button type="button" id="botonConfirmar" disabled="disabled">Confirmar pedido</button>
+            </section>
+            <section id="divZonaCompra" class="divZonaCompraNo">
+					<!--Carrito de la compra-->
+					<section id="divTotal" class="divsNo" aria-labelledby="tituloCarrito">
+						<h2 id="tituloCarrito">Carrito de la compra, si quiere hacer alguna modificacion aun esta a tiempo:</h2>
+						<table id="tablaTotal"></table>
+					</section>
+					<!--Datos personales-->				
+					<form id="divDatos" class="divsNo" aria-labelledby="tituloDatos">
+						<h2 id="tituloDatos">Introduzca sus datos personales:</h2>
+							<section id="divDatosPersonales0">
+								<fieldset id="divDatosPersonales1">
+									<legend>Datos personales</legend>
+									<label for="nombre">Nombre completo:</label><br/>
+									<input type="text" id="nombre" value="" size="26" /><br/>
+									<label for="dni">DNI:</label><br/>
+									<input type="text" id="dni" value="" size="8" maxlength="9" /><br/>
+									<label for="fechaNacimientoDia">Fecha de nacimiento:</label><br/>
+									<select id="fechaNacimientoDia">
+										<option value="">&nbsp;dia&nbsp;</option>
+									</select>
+									<select id="fechaNacimientoMes">
+										<option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mes</option>
+										<option value="1">Enero</option>
+										<option value="2">Febrero</option>
+										<option value="3">Marzo</option>
+										<option value="4">Abril</option>
+										<option value="5">Mayo</option>
+										<option value="6">Junio</option>
+										<option value="7">Julio</option>
+										<option value="8">Agosto</option>
+										<option value="9">Septiembre</option>
+										<option value="10">Octubre</option>
+										<option value="11">Noviembre</option>
+										<option value="12">Diciembre</option>
+									</select>			
+									<select id="fechaNacimientoAnio">
+										<option value="">&nbsp;&nbsp;año&nbsp;</option>
+									</select><br/>
+								</fieldset>
+								<fieldset id="divDatosPersonales2">
+									<legend>Contacto</legend>
+									<label for="movil">Telefono movil:</label><br/>
+									<input type="text" id="movil" value="" size="8" maxlength="9"/><br/>
+									<label for="email1">Email:</label><br/>
+									<input type="text" id="email1" value="" size="25" /><br/>
+									<label for="email2">Repita el email:</label><br/>
+									<input type="text" id="email2" value="" size="25" />							
+								</fieldset>
+							</section>
+						<fieldset id="divDomicilio">
+							<legend>Domicilio</legend>
+							<label for="tipoDeVia">Tipo de via:</label>
+							<select id="tipoDeVia">
+								<option value="Avenida">Avenida</option>
+								<option value="Calle"selected="selected">Calle</option>
+								<option value="Camino">Camino</option>
+								<option value="Carretera">Carretera</option>
+								<option value="Pasaje">Pasaje</option>
+								<option value="Plaza">Plaza</option>
+								<option value="Residencia">Residencia</option>
+								<option value="Ronda">Ronda</option>
+								<option value="Travesia">Travesia</option>
+								<option value="Urbanizacion">Urbanizacion</option>
+							</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<label for="viaNombre">Nombre via:</label>
+							<input type="text" id="viaNombre" value="" size="20" /><br/>
+							<label for="viaNumero">Nº/km:</label>
+							<input type="text" id="viaNumero" value="" size="2" />&nbsp;&nbsp;
+							<label for="viaBloque">Bloque:</label>
+							<input type="text" id="viaBloque" value="" size="2" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<label for="viaEscalera">Escalera:</label>
+							<input type="text" id="viaEscalera" value="" size="2" />&nbsp;&nbsp;
+							<label for="viaPiso">Piso:</label>
+							<input type="text" id="viaPiso" value="" size="2" /><br/>
+							<label for="localidad">Localidad:</label>
+							<input type="text" id="localidad" value="" size="13"/>&nbsp;&nbsp;
+							<label for="codigoPostal">Codigo Postal:</label>
+							<input type="text" id="codigoPostal" value="" size="5" maxlength="5"/>&nbsp;&nbsp;
+							<label for="provincia">Provincia:</label>
+							<select id="provincia">
+								<option value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;provincia</option>
+								<option value="15">A coru&#241;a</option>
+								<option value="1">&#193;lava</option>
+								<option value="2">Albacete</option>
+								<option value="3">Alicante</option>
+								<option value="4">Almer&#237;a</option>
+								<option value="33">Asturias</option>
+								<option value="5">&#193;vila</option>
+								<option value="6">Badajoz</option>
+								<option value="7">Baleares</option>
+								<option value="8">Barcelona</option>
+								<option value="9">Burgos</option>
+								<option value="10">C&#225;ceres</option>
+								<option value="11">C&#225;diz</option>
+								<option value="39">Cantabria</option>
+								<option value="12">Castell&#243;n</option>
+								<option value="51">Ceuta</option>
+								<option value="13">Ciudad Real</option>
+								<option value="14">C&#243;rdoba</option>
+								<option value="16">Cuenca</option>
+								<option value="99">Extranjero</option>
+								<option value="17">Girona</option>
+								<option value="18">Granada</option>
+								<option value="19">Guadalajara</option>
+								<option value="20">Guip&#250;zcoa</option>
+								<option value="21">Huelva</option>
+								<option value="22">Huesca</option>
+								<option value="23">Ja&#233;n</option>
+								<option value="26">La rioja</option>
+								<option value="35">Las palmas</option>
+								<option value="24">Le&#243;n</option>
+								<option value="25">Lleida</option>
+								<option value="27">Lugo</option>
+								<option value="28">Madrid</option>
+								<option value="29">M&#225;laga</option>
+								<option value="52">Melilla</option>
+								<option value="30">Murcia</option>
+								<option value="31">Navarra</option>
+								<option value="32">Ourense</option>
+								<option value="34">Palencia</option>
+								<option value="36">Pontevedra</option>
+								<option value="37">Salamanca</option>
+								<option value="38">Santa cruz de tenerife</option>
+								<option value="40">Segovia</option>
+								<option value="41">Sevilla</option>
+								<option value="42">Soria</option>
+								<option value="43">Tarragona</option>
+								<option value="44">Teruel</option>
+								<option value="45">Toledo</option>
+								<option value="46">Valencia</option>
+								<option value="47">Valladolid</option>
+								<option value="48">Vizcaya</option>
+								<option value="49">Zamora</option>
+								<option value="50">Zaragoza</option>
+							</select>
+						</fieldset>
+					</form>
+					<!--Datos de pago-->
+					<form id="divPago" class="divsNo" aria-labelledby="tituloPago">
+						<h2 id="tituloPago">Introduzca los datos de la tarjeta de credito/debito donde se cargara el cobro:</h2>
+						<label for="titular">Titular de la tarjeta:</label><br/>
+						<input type="text" id="titular" value="" size="26" /><br/>
+						<fieldset id="metodosDePago">
+							<legend><span id="alertTipoDeTarjeta">Tipo de tarjeta:</span></legend>
+							<label for="visa">
+								<input type="radio" id="visa" name="tarjetas" class="logoTarjetas" value="Visa">
+								<img src="img/pago/visa.gif" alt="Tarjeta Visa">
+							</label>
+							<label for="masterCard">
+								<input type="radio" id="masterCard" name="tarjetas" class="logoTarjetas" value="MasterCard">
+								<img src="img/pago/mastercard.gif" alt="Tarjeta MasterCard">
+							</label>
+							<label for="amex">
+								<input type="radio" id="amex" name="tarjetas" class="logoTarjetas" value="American Express">
+								<img src="img/pago/amex.gif" alt="Tarjeta American Express">
+							</label> 
+							<label for="aurora">
+								<input type="radio" id="aurora" name="tarjetas" class="logoTarjetas" value="Aurora">
+								<img src="img/pago/aurora.gif" alt="Tarjeta Aurora">
+							</label>
+						</fieldset>
+						<fieldset id="divNumeroTarjeta">
+							<legend>Numero de tarjeta</legend>
+							<label for="numeroTarjeta">Numero tarjeta:</label><br/>
+							<input type="text" id="numeroTarjeta" value="" size="15" maxlength="16" />
+							<label for="cvcTarjeta">CVC:</label>
+							<input type="text" id="cvcTarjeta" value="" size="2" maxlength="3" /><br/>
+							<label for="mesTarjeta">Mes:</label>
+							<select id="mesTarjeta">
+								<option value="">&nbsp;&nbsp;mes&nbsp;</option>
+							</select>
+							<label for="anioTarjeta">Año:</label>
+							<select id="anioTarjeta">
+								<option value="">&nbsp;&nbsp;a�o&nbsp;</option>
+							</select>
+						</fieldset>
+					</form>						
+				</section>
+        </section>
+    </main>
+    <footer>
+        <p class="pie">Imagen de fondo propiedad de <a href="http://www.appinformatica.com/" target="_blank" rel="noopener noreferrer">appinformatica</a></p>
+    </footer>
+</body>
+</html>
